@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.base;
 
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -11,5 +11,5 @@ import org.springframework.data.domain.Sort;
 
 public class BaseController {
     protected int page = 0, size = 1;
-    protected Pageable pageable = new PageRequest(page, size, new Sort(Sort.Direction.ASC, "id"));
+    protected Pageable pageable = PageRequest.of(page, size, new Sort(Sort.Direction.ASC, "id"));
 }
