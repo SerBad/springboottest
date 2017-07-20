@@ -1,5 +1,7 @@
 package com.example.demo.domain;
 
+import com.example.demo.base.BaseEntity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +12,7 @@ import java.io.Serializable;
  * Created by zhou on 2017/7/4.
  */
 @Entity
-public class User implements Serializable {
+public class User implements Serializable,BaseEntity {
 
     private static final long serialVersionUID = 1L;
     @Id

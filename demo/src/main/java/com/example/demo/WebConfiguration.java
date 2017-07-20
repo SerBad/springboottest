@@ -28,6 +28,7 @@ public class WebConfiguration {
         registration.addInitParameter("paramName", "paramValue");
         registration.setName("MyFilter");
         registration.setOrder(1);
+
         return registration;
     }
 
@@ -42,13 +43,15 @@ public class WebConfiguration {
                 throws IOException, ServletException {
 
             HttpServletRequest request = (HttpServletRequest) srequest;
-            System.out.println("this is MyFilter,url :"+request.getRequestURI());
+            System.out.println("this is MyFilter,url :"+request.getRequestURL());
+            //sresponse.getOutputStream().write("Xxxxxxxxx".getBytes());
+
             filterChain.doFilter(srequest, sresponse);
         }
 
         @Override
         public void init(FilterConfig arg0) throws ServletException {
-
+            System.out.println(arg0.getServletContext().getContextPath());
         }
     }
 }
