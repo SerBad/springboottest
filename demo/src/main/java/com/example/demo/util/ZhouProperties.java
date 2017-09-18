@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class ZhouProperties {
-    @Value("${com.example.title}")
+//    @Value("${com.example.title}")
     private String title;
 
     public void setTitle(String title) {

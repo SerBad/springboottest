@@ -1,0 +1,44 @@
+##logging:
+##  path: /user/local/log
+##  level:
+##    com:
+##      favorites: DEBUG
+##    org:
+##      springframework:
+##        web: INFO
+##      hibernate: ERROR
+#
+server:
+  port: 8003
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: xx
+#  redis:
+#    database: 0 # Redis数据库索引（默认为0）
+#    host: localhost # Redis服务器地址
+#    port: 6379 # Redis服务器连接端口
+#    password:
+#    pool:
+#      max-active: 8 # 连接池最大连接数（使用负值表示没有限制）
+#      max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+#      max-idle: 8
+  jpa:
+    database: default
+    hibernate.ddl-auto: update #dialect 主要是指定生成表名的存储引擎为InneoDB
+    show-sql: true
+   # 连接池中的最大空闲连接
+#
+#none, validate, update, create, create-drop
+
+
+
+
+com:
+  example:
+   title: zhou
+
+
